@@ -1,5 +1,5 @@
 from random import randint
-
+from gameComponents import winLose
 
 # an array is just a container. It holds multiple values in a 0-based index
 # you can store anything in an array and retrieve it later. Arrays have square brackets notation
@@ -12,24 +12,6 @@ playerLives = 2
 computerLives = 2
 
 # define a win/lose function and invoke it in our game loop when lives run out (player or computer)
-
-def winorlose(status):
-    print("You " + status + "! Would you like to play again?")
-    choice = input(" Y / N? ")
-
-    global playerLives
-    global computerLives
-    global player
-
-    if choice == "n":
-        print("better luck next time!")
-        exit()
-    else:
-        # reset and restart the game
-        playerLives = 5
-        computerLives = 5
-        player = False
-
 
 # create an infinite loop (for now) so that we can keep playing
 while player is False:
@@ -77,12 +59,12 @@ while player is False:
         
         if playerLives == 0:
             # call the winorlose function here
-            winorlose("lost")
+            winLose.winorlose("lost")
 
 
         elif computerLives == 0:
             # call the winorlose function here
-            winorlose("won")
+            winLose.winorlose("won")
         
         player = False
 
