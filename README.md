@@ -22,6 +22,8 @@ Built with [Python 3](https://www.python.org/doc/)
 
 Enjoy!
 
+### Author
+Alexandra Lem
+
 ### License
-Author: Alexandra Lem
 MIT
